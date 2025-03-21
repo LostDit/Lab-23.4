@@ -6,16 +6,16 @@
 	#include <windows.h>
 #endif // defined(_WIN32)||defined(_WIN64)
 
-//Для определения макроса под сезон года:
+//Р”Р»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РјР°РєСЂРѕСЃР° РїРѕРґ СЃРµР·РѕРЅ РіРѕРґР°:
 //#define SPRING
 //#define SUMMER
 //#define AUTUMN
 #define WINTER
 
 #if defined(SPRING)
-#define SEASON_NAME "Весна"
+#define SEASON_NAME "Р’РµСЃРЅР°"
 int main() {
-	//Локализация консоли
+	//Р›РѕРєР°Р»РёР·Р°С†РёСЏ РєРѕРЅСЃРѕР»Рё
 	std::setlocale(LC_ALL, "");
 	#if defined(_WIN32)||defined(_WIN64)
 	SetConsoleCP(1251);
@@ -29,9 +29,9 @@ int main() {
 }
 
 #elif defined(SUMMER)
-#define SEASON_NAME "Лето"
+#define SEASON_NAME "Р›РµС‚Рѕ"
 int main() {
-	//Локализация консоли
+	//Р›РѕРєР°Р»РёР·Р°С†РёСЏ РєРѕРЅСЃРѕР»Рё
 	std::setlocale(LC_ALL, "");
 #if defined(_WIN32)||defined(_WIN64)
 	SetConsoleCP(1251);
@@ -44,9 +44,9 @@ int main() {
 }
 
 #elif defined(AUTUMN)
-#define SEASON_NAME "Осень"
+#define SEASON_NAME "РћСЃРµРЅСЊ"
 int main() {
-	//Локализация консоли
+	//Р›РѕРєР°Р»РёР·Р°С†РёСЏ РєРѕРЅСЃРѕР»Рё
 	std::setlocale(LC_ALL, "");
 #if defined(_WIN32)||defined(_WIN64)
 	SetConsoleCP(1251);
@@ -59,9 +59,9 @@ int main() {
 }
 
 #elif defined(WINTER)
-#define SEASON_NAME "Зима"
+#define SEASON_NAME "Р—РёРјР°"
 int main() {
-	//Локализация консоли
+	//Р›РѕРєР°Р»РёР·Р°С†РёСЏ РєРѕРЅСЃРѕР»Рё
 	std::setlocale(LC_ALL, "");
 #if defined(_WIN32)||defined(_WIN64)
 	SetConsoleCP(1251);

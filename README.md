@@ -1,3 +1,4 @@
+# [Литература которую использовал при написании](https://www.opennet.ru/docs/RUS/ansi-c/ansi-c-8.html)
 ## [Задание 1. Реализация продвинутого ввода и вывода дней недели](https://github.com/LostDit/Lab-23.4/blob/master/Task%201/Task%201.cpp)
 ### Что нужно сделать
 

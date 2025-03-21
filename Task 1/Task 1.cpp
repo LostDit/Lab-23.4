@@ -15,9 +15,9 @@
 #define DAY6 "Суббота"
 #define DAY7 "Воскресенье"
 
-#define PRINT_DAY(num,dayStr)	\
-	case num:					\
-		std::cout<<dayStr;		\
+#define PRINT_DAY(num,dayStr)		\
+	case num:			\
+		std::cout<<dayStr;	\
 		break;
 //Конец блока
 

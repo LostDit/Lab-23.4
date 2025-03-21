@@ -1,35 +1,35 @@
 #include <iostream>
 
-//Блок для кириллицы
+//Р‘Р»РѕРє РґР»СЏ РєРёСЂРёР»Р»РёС†С‹
 #ifdef _WIN32
 #include "Windows.h"
 #endif // _WIN32
-//Конец блока для кириллицы
+//РљРѕРЅРµС† Р±Р»РѕРєР° РґР»СЏ РєРёСЂРёР»Р»РёС†С‹
 
-//Блок макросов
-#define DAY1 "Понедельник"
-#define DAY2 "Вторник"
-#define DAY3 "Среда"
-#define DAY4 "Четверг"
-#define DAY5 "Пятница"
-#define DAY6 "Суббота"
-#define DAY7 "Воскресенье"
+//Р‘Р»РѕРє РјР°РєСЂРѕСЃРѕРІ
+#define DAY1 "РџРѕРЅРµРґРµР»СЊРЅРёРє"
+#define DAY2 "Р’С‚РѕСЂРЅРёРє"
+#define DAY3 "РЎСЂРµРґР°"
+#define DAY4 "Р§РµС‚РІРµСЂРі"
+#define DAY5 "РџСЏС‚РЅРёС†Р°"
+#define DAY6 "РЎСѓР±Р±РѕС‚Р°"
+#define DAY7 "Р’РѕСЃРєСЂРµСЃРµРЅСЊРµ"
 
-#define PRINT_DAY(num,dayStr)	\
-	case num:					\
-		std::cout<<dayStr;		\
+#define PRINT_DAY(num,dayStr)		\
+	case num:			\
+		std::cout<<dayStr;	\
 		break;
-//Конец блока
+//РљРѕРЅРµС† Р±Р»РѕРєР°
 
 
 int main(void) {
-	//Блок для кириллицы
+	//Р‘Р»РѕРє РґР»СЏ РєРёСЂРёР»Р»РёС†С‹
 	setlocale(LC_ALL, "");
 #ifdef _WIN32
 	SetConsoleCP(866);
 	SetConsoleOutputCP(866);
 #endif
-	//Конец блока для кириллицы
+	//РљРѕРЅРµС† Р±Р»РѕРєР° РґР»СЏ РєРёСЂРёР»Р»РёС†С‹
 	
 	int day;
 
@@ -44,7 +44,7 @@ int main(void) {
 			PRINT_DAY(6, DAY6)
 			PRINT_DAY(7, DAY7)
 	default:
-		std::cout << "Неверный номер дня!\n";
+		std::cout << "РќРµРІРµСЂРЅС‹Р№ РЅРѕРјРµСЂ РґРЅСЏ!\n";
 	}
 
 	return 0;

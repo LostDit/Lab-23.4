@@ -5,74 +5,74 @@
 #ifdef _WIN32
 #include "Windows.h"
 #endif // _WIN32
-//Конец блока для кириллицы
+//РљРѕРЅРµС† Р±Р»РѕРєР° РґР»СЏ РєРёСЂРёР»Р»РёС†С‹
 
-// Макрос для итерации по элементам массива.
-#define ITERATE(count, code) { \
-    for (int i = 0; i < count; i++) { \
-        code; \
-    } \
+// РњР°РєСЂРѕСЃ РґР»СЏ РёС‚РµСЂР°С†РёРё РїРѕ СЌР»РµРјРµРЅС‚Р°Рј РјР°СЃСЃРёРІР°.
+#define ITERATE(count, code) {          \
+    for (int i = 0; i < count; i++) {   \
+        code;                           \
+    }                                   \
 }
 
-// Функция для печати сообщения
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ РїРµС‡Р°С‚Рё СЃРѕРѕР±С‰РµРЅРёСЏ
 void print(const std::string& str) {
     std::cout << str << std::endl;
 }
 
-// Если количество пассажиров > 20, выводит сообщение.
+// Р•СЃР»Рё РєРѕР»РёС‡РµСЃС‚РІРѕ РїР°СЃСЃР°Р¶РёСЂРѕРІ > 20, РІС‹РІРѕРґРёС‚ СЃРѕРѕР±С‰РµРЅРёРµ.
 void checkOverloaded(int wagonIndex, int passengers) {
     const int optimal = 20;
     if (passengers > optimal) {
-        print("Вагон " + std::to_string(wagonIndex + 1)
-            + " излишне заполнен (" + std::to_string(passengers) + " пассажиров)!");
+        print("Р’Р°РіРѕРЅ " + std::to_string(wagonIndex + 1)
+            + " РёР·Р»РёС€РЅРµ Р·Р°РїРѕР»РЅРµРЅ (" + std::to_string(passengers) + " РїР°СЃСЃР°Р¶РёСЂРѕРІ)!");
     }
 }
 
-// Если количество пассажиров < 20, выводит сообщение.
+// Р•СЃР»Рё РєРѕР»РёС‡РµСЃС‚РІРѕ РїР°СЃСЃР°Р¶РёСЂРѕРІ < 20, РІС‹РІРѕРґРёС‚ СЃРѕРѕР±С‰РµРЅРёРµ.
 void checkEmptySpots(int wagonIndex, int passengers) {
     const int optimal = 20;
     if (passengers < optimal) {
-        print("Вагон " + std::to_string(wagonIndex + 1)
-            + " имеет пустые места (" + std::to_string(passengers) + " пассажиров)!");
+        print("Р’Р°РіРѕРЅ " + std::to_string(wagonIndex + 1)
+            + " РёРјРµРµС‚ РїСѓСЃС‚С‹Рµ РјРµСЃС‚Р° (" + std::to_string(passengers) + " РїР°СЃСЃР°Р¶РёСЂРѕРІ)!");
     }
 }
 
 int main() {
-    //Блок для кириллицы
+    //Р‘Р»РѕРє РґР»СЏ РєРёСЂРёР»Р»РёС†С‹
     setlocale(LC_ALL, "");
 #ifdef _WIN32
     SetConsoleCP(866);
     SetConsoleOutputCP(866);
 #endif
-    //Конец блока для кириллицы
+    //РљРѕРЅРµС† Р±Р»РѕРєР° РґР»СЏ РєРёСЂРёР»Р»РёС†С‹
 
     const int NUM_WAGONS = 10;
     std::vector<int> passengers(NUM_WAGONS);
 
-    std::cout << "Введите количество пассажиров в каждом из 10 вагонов:" << std::endl;
-    // Чтение данных для каждого вагона
+    std::cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ РїР°СЃСЃР°Р¶РёСЂРѕРІ РІ РєР°Р¶РґРѕРј РёР· 10 РІР°РіРѕРЅРѕРІ:" << std::endl;
+    // Р§С‚РµРЅРёРµ РґР°РЅРЅС‹С… РґР»СЏ РєР°Р¶РґРѕРіРѕ РІР°РіРѕРЅР°
     ITERATE(NUM_WAGONS, {
         std::cin >> passengers[i];
         });
 
-    // Вывод информации об излишне заполненных вагонах
-    print("\nИзлишне заполненные вагоны:");
+    // Р’С‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё РѕР± РёР·Р»РёС€РЅРµ Р·Р°РїРѕР»РЅРµРЅРЅС‹С… РІР°РіРѕРЅР°С…
+    print("\nРР·Р»РёС€РЅРµ Р·Р°РїРѕР»РЅРµРЅРЅС‹Рµ РІР°РіРѕРЅС‹:");
     ITERATE(NUM_WAGONS, {
         checkOverloaded(i, passengers[i]);
         });
 
-    // Вывод информации о вагонах с пустыми местами
-    print("\nВагоны с пустыми пассажирскими местами:");
+    // Р’С‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РІР°РіРѕРЅР°С… СЃ РїСѓСЃС‚С‹РјРё РјРµСЃС‚Р°РјРё
+    print("\nР’Р°РіРѕРЅС‹ СЃ РїСѓСЃС‚С‹РјРё РїР°СЃСЃР°Р¶РёСЂСЃРєРёРјРё РјРµСЃС‚Р°РјРё:");
     ITERATE(NUM_WAGONS, {
         checkEmptySpots(i, passengers[i]);
         });
 
-    // Подсчёт общего количества пассажиров
+    // РџРѕРґСЃС‡С‘С‚ РѕР±С‰РµРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° РїР°СЃСЃР°Р¶РёСЂРѕРІ
     int totalPassengers = 0;
     ITERATE(NUM_WAGONS, {
         totalPassengers += passengers[i];
         });
-    print("\nОбщее количество пассажиров: " + std::to_string(totalPassengers));
+    print("\nРћР±С‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РїР°СЃСЃР°Р¶РёСЂРѕРІ: " + std::to_string(totalPassengers));
 
     return 0;
 }
